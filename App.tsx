@@ -3,18 +3,27 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>INHERE!!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <View style={{
+      flex: 1,
+      backgroundColor: '#131016',
+      padding: 24
+    }}>
+      <Text style={{
+        color: '#fa7f72',
+        fontSize: 24,
+        fontWeight: 'bold',
+        marginTop: 48
+      }}>
+        Nome do evento
+        </Text>
+        <Text style={{
+        color: '#fa2f12',
+        fontSize: 16,
+      }}>
+        Segunda Feira 5 de Fevereiro de 2024
+        </Text>
+    </View>    
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 2,
-    backgroundColor: '#2db378',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
