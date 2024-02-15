@@ -43,7 +43,7 @@ export default function Home() {
         <Participant
         key ={participant}
         name ={participant}
-        onRemove={() => handleParticipantRemove("!")} />
+        onRemove={() => handleParticipantRemove("!!!")} />
       ))
     }    
     </ScrollView>
