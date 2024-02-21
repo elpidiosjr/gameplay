@@ -50,7 +50,7 @@ export default function Home() {
         showsVerticalScrollIndicator={false}
         ListEmptyComponent={() => (
           <Text style={styles.ListEmptyText}>
-            Ninguém chegou no evento ainda? Adicione participantes a sua lista de presença;
+            Ninguém chegou no evento ainda?? Adicione participantes a sua lista de presença;
           </Text>
         )}
     />
