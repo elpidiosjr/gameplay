@@ -15,7 +15,16 @@ export default function Home() {
   }
 
   function handleParticipantRemove(name: string){
-    Alert.alert ("Remover", "Deseja remover o participante?")
+    Alert.alert ("Remover", `Remover o participante ${name}?`, [
+      {
+        text: 'Sim', 
+        onPress: () => Alert.alert("Deletado!")
+      },
+      {
+        text: 'Não',
+        style: 'cancel'
+      }
+    ]);
 
     console.log(`Você clicou em remover o participante ${name}`)
   }
@@ -49,7 +58,7 @@ export default function Home() {
         <Participant
         key ={item}
         name ={item}
-        onRemove={() => handleParticipantRemove("!!!")} 
+        onRemove={() => handleParticipantRemove(item)} 
           />
         )}  
         showsVerticalScrollIndicator={false}
