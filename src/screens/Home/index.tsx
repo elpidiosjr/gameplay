@@ -5,13 +5,14 @@ import { styles } from './styles';
 import { Participant } from "../../components/Participant";
 
 export default function Home() {
-  const participants = ['Pedro', 'Andre', 'Tiago Menor','Tiago Maior' ,  'João', 'Mateus', 'Filipe', 'Judas Iscariotes', 'Bartolomeu', 'Simão', 'Tomé', 'Judas Tadeu'];
+  const participants = ['João'];
 
   function handleParticipantAdd(){
-    if(participants.includes ("Pedro")) {
+    if(participants.includes ("Rodrigo")) {
       return Alert.alert("Participante Existe", "Já existe um participante na lista com esse nome");
      }
-    console.log("Voce clicou no botao de Adicionar!");
+     participants.push('Ana');
+     console.log(participants);
   }
 
   function handleParticipantRemove(name: string){
