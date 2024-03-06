@@ -9,7 +9,6 @@ export default function Home() {
   const [participants, setParticipants] = useState<string[]>([]);
   const [participantName, setParticipantName] = useState ('');
 
-
   function handleParticipantAdd(){
     if(participants.includes (participantName)) {
       return Alert.alert("Participante Existe", "Já existe um participante na lista com esse nome");
@@ -18,11 +17,12 @@ export default function Home() {
      setParticipantName('');
   }
 
-  function handleParticipantRemove(name: string){
+  function handleParticipantRemove(name: string) {
+   
     Alert.alert ("Remover", `Remover o participante ${name}?`, [
       {
         text: 'Sim', 
-        onPress: () => Alert.alert("Deletado!")
+        onPress: () => setParticipants(PrevState => PrevState.filter(participant => participant !== name))
       },
       {
         text: 'Não',
@@ -33,13 +33,19 @@ export default function Home() {
     console.log(`Você clicou em remover o participante ${name}`)
   }
 
+  //function handleState(value: string) {
+
+    //setParticipantName(value);
+   // console.log(participantName);
+ //}
+
   return (
     <View style={styles.container}>
       <Text style={styles.eventName}>
-        Nome do evento
+      Gameplay and Party
         </Text>
         <Text style={styles.eventDate}>
-        Segunda Feira 5 de Fevereiro de 2024
+        Quarta Feira, 6 de Março de 2024
         </Text>
        <View style={styles.form}>
         <TextInput
@@ -69,7 +75,7 @@ export default function Home() {
         showsVerticalScrollIndicator={false}
         ListEmptyComponent={() => (
           <Text style={styles.ListEmptyText}>
-            Ninguém chegou no evento ainda?? Adicione participantes a sua lista de presença;
+            Ninguém participando do jogo ainda? Adicione jogadores a sua gameplay!;
           </Text>
         )}
     />
