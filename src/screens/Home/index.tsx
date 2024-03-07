@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Text, View, TextInput, TouchableOpacity, FlatList, Alert } from "react-native";
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, FlatList, Alert, ImageBackground } from "react-native";
 
 import { Participant } from "../../components/Participant";
 
@@ -29,18 +29,12 @@ export default function Home() {
         style: 'cancel'
       }
     ]);
-
-    console.log(`Você clicou em remover o participante ${name}`)
   }
 
-  //function handleState(value: string) {
-
-    //setParticipantName(value);
-   // console.log(participantName);
- //}
-
+    
   return (
-    <View style={styles.container}>
+      <ImageBackground  source={require('../Home/dragonimg.png')} style={styles.background}>
+       <View style={styles.container}>
       <Text style={styles.eventName}>
       Gameplay and Party
         </Text>
@@ -80,5 +74,6 @@ export default function Home() {
         )}
     />
     </View>    
+    </ImageBackground>
   );
 }
